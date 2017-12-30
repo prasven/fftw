@@ -21,8 +21,8 @@
 
 #include "ifftw.h"
 
-#if defined(HAVE_MALLOC_H)
-#  include <malloc.h>
+#ifndef __clang__
+# include <malloc.h>
 #endif
 
 /* ``kernel'' malloc(), with proper memory alignment */
